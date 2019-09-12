@@ -29,7 +29,7 @@ class RunTests(Command):
 
 setup(
     name='robostash',
-    version='0.1.1',
+    version='0.2.0',
     description='A command-line tool to backup and restore Git Repositories from Atlassian Bitbucket',
     long_description='A command-line tool to backup and restore Git Repositories from Atlassian Bitbucket',
     url='https://github.com/dinohead/robostash',
