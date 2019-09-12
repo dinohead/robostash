@@ -38,6 +38,7 @@ pip install robostash
 |---|---|---|---|
 | `-u`,`--user` | Bitbucket username | string | None |
 | `-p`,`--password` | Bitbucket password | string | None |
+| `-f`,`--credfile` | path to a Bitbucket password file | string | None |
 | `-k`,`--key` | Bitbucket project key | string | None |
 | `-b`,`--url` | Bitbucket url | string | None |
 | `-v`,`--version` | Display program version | N/A | None |
@@ -50,6 +51,8 @@ pip install robostash
 Run the program to archive all of the repos in a Bitbucket project
 
     robostash archive -u thomas.magnum -p H1ggyBabby -k rmasters -u https://bitbucket.com
+    
+    robostash archive -u thomas.magnum -f ~/pass -k rmasters -u https://bitbucket.com
 
 Run the program to display the version
 
