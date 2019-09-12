@@ -5,9 +5,15 @@ within an Atlassian Bitbucket Project. In the future the ability to push multipl
 to an Atlassian Bitbucket Project will also be included. Other platforms (ex. GitHub, GitLab, etc)
 may eventually be supported as well.
 
-Currently robostash only supports "archive" mode which will create a tarball containing mirror
+Currently robostash supports "archive-bb" mode which will create a tarball containing mirror
 (bare) copies of all of the Git repositories contained within a single Bitbucket project. The tarball
 will be created within your current working directory.
+
+Robostash also supports "archive-list" mode which will create a tarball containing mirror 
+(bare) copies of all of the Git repositories listed in a file. The file should be formatted with the
+URLs of the repositories to be cloned, one repository per line. This mode currently does not support
+providing credentials for cloning the repos. It is assumed they are publicly accessible, ssh keys
+or a git-credential store has already been configured. 
 
 ## Requirements
 
@@ -50,9 +56,13 @@ pip install robostash
 
 Run the program to archive all of the repos in a Bitbucket project
 
-    robostash archive -u thomas.magnum -p H1ggyBabby -k rmasters -u https://bitbucket.com
+    robostash archive-bb -u thomas.magnum -p H1ggyBabby -k rmasters -u https://bitbucket.com
     
-    robostash archive -u thomas.magnum -f ~/pass -k rmasters -u https://bitbucket.com
+    robostash archive-bb -u thomas.magnum -f ~/pass -k rmasters -u https://bitbucket.com
+    
+Run the program to archive a list of repos
+
+    robostash archive-list -r ~/repos -n githubrepos
 
 Run the program to display the version
 
