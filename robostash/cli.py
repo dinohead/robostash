@@ -54,7 +54,7 @@ required.add_argument('-b', '--url', help='Bitbucket url\n  example: https://bit
 
 # optional arguments
 # TODO: always update VERSION number, it is right ---------------------------->HERE!<
-optional.add_argument('-v', '--version', action='version', version='robostash - v0.1.0 Higgins')
+optional.add_argument('-v', '--version', action='version', version='robostash - v0.1.1 Higgins')
 optional.add_argument('-p', '--password', help='Bitbucket password\n  example: H1ggyBabby')
 optional.add_argument('-f', '--credfile', help='path to a Bitbucket password file\n')
 
